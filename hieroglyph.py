@@ -1,24 +1,55 @@
 #!/usr/bin/python3
 
-#Developer : Hamdy Abou El Anein
+# Developer : Hamdy Abou El Anein
 
 from easygui import *
 import sys
 
-dict = {"1": "./pictures/a.jpg","2": "./pictures/b.jpg","3": "./pictures/c.jpg",
-        "4": "./pictures/d.jpg","5": "./pictures/e.jpg","6": "./pictures/f.jpg",
-        "7": "./pictures/g.jpg","8": "./pictures/h.jpg","9": "./pictures/i.jpg",
-        "10": "./pictures/j.jpg","11": "./pictures/k.jpg","12": "./pictures/l.jpg",
-        "13": "./pictures/m.jpg","14": "./pictures/n.jpg","15": "./pictures/o.jpg",
-        "16": "./pictures/p.jpg","17":"./pictures/q.jpg","18": "./pictures/r.jpg",
-        "19": "./pictures/s.jpg","20": "./pictures/t.jpg","21": "./pictures/u.jpg",
-        "22": "./pictures/v.jpg","23": "./pictures/w.jpg","24": "./pictures/x.jpg",
-        "25": "./pictures/y.jpg","26": "./pictures/z.jpg","-57" : "", "137":"./pictures/e.jpg",
-        "136": "./pictures/e.jpg", "128": "./pictures/a.jpg", "-64": "","150":"./pictures/o.jpg",
-        "132":"./pictures/a.jpg","-51":""}
+dict = {
+    "1": "./pictures/a.jpg",
+    "2": "./pictures/b.jpg",
+    "3": "./pictures/c.jpg",
+    "4": "./pictures/d.jpg",
+    "5": "./pictures/e.jpg",
+    "6": "./pictures/f.jpg",
+    "7": "./pictures/g.jpg",
+    "8": "./pictures/h.jpg",
+    "9": "./pictures/i.jpg",
+    "10": "./pictures/j.jpg",
+    "11": "./pictures/k.jpg",
+    "12": "./pictures/l.jpg",
+    "13": "./pictures/m.jpg",
+    "14": "./pictures/n.jpg",
+    "15": "./pictures/o.jpg",
+    "16": "./pictures/p.jpg",
+    "17": "./pictures/q.jpg",
+    "18": "./pictures/r.jpg",
+    "19": "./pictures/s.jpg",
+    "20": "./pictures/t.jpg",
+    "21": "./pictures/u.jpg",
+    "22": "./pictures/v.jpg",
+    "23": "./pictures/w.jpg",
+    "24": "./pictures/x.jpg",
+    "25": "./pictures/y.jpg",
+    "26": "./pictures/z.jpg",
+    "-57": "",
+    "137": "./pictures/e.jpg",
+    "136": "./pictures/e.jpg",
+    "128": "./pictures/a.jpg",
+    "-64": "",
+    "150": "./pictures/o.jpg",
+    "132": "./pictures/a.jpg",
+    "-51": "",
+}
+
 
 def entertext():
-    text=enterbox(msg="Welcome to the Rosetta Stone Hieroglyphic translator \n\n\n Enter your name in the field below", image = "./pictures/rosetta_stone.jpg", title="Rosetta Stone Hieroglyph translation", default="Your name here")
+    text = enterbox(
+        msg="Welcome to the Rosetta Stone Hieroglyphic translator \n\n\n Enter your name in the field below",
+        image="./pictures/rosetta_stone.jpg",
+        title="Rosetta Stone Hieroglyph translation",
+        default="Your name here",
+    )
     if text == None:
         sys.exit(0)
     else:
@@ -27,7 +58,7 @@ def entertext():
         for character in text:
             number = ord(character) - 96
             output.append(number)
-            #print(output)
+            # print(output)
 
         for n, i in enumerate(output):
             if i == 1:
@@ -107,4 +138,6 @@ def entertext():
             entertext()
         else:
             sys.exit(0)
+
+
 entertext()
